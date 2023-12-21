@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(240, 252, 246);
+  font-family: sans-serif;
+  display: block;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100vh;
+  width: 89%;
+  margin-inline: auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+@media screen (min-width: 1024px) {
+    .main{
+      display: none;
+    }
+}
+
+
+h1 {
+  margin-block: 20px;
+  color: #000b0a;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+img {
+  width: 77.33px;
+  height: 77px;
+  display: block;
+  max-width: 100%;
+  margin-top: 20;
+}
+
+.text2{
+    color: #737373;
+    font-size: 1rem;
+    line-height: 25px;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+  }
+
+@media only screen and (min-width: 1023.9px) {
+    .text2{
+        display: none;
+    }
+}
+
+.text1{
+  color: #737373;
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  display: block;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+@media only screen and (max-width: 1024.5px) {
+    .text1{
+        display: none;
+    }
+}
+
+.leftside {
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  width: min(50%, 500px);
+}
+
+.rightside {
+    margin: AUTO;
+  width: 50% 500px;
+  display: block;
+  color: black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  width: 576px;
+  max-width: fit-content;
+  height: 530px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.form {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2px;
+  display: grid;  
+  
+  grid-gap: 10px;
+  height: 530px;
+  width: 374.5px;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.column{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+input,
+select {
+  height: 30px;
+  width: 90%;
+}
+
+ 
+.label{
+    display: grid;
+    grid-template-rows: auto;
+}
