@@ -1,7 +1,6 @@
 body {
   background-color: rgb(240, 252, 246);
   font-family: sans-serif;
-  display: block;
   box-sizing: border-box;
   margin: 0px;
 }
@@ -15,14 +14,16 @@ body {
   margin-inline: auto;
   justify-content: space-around;
   align-items: center;
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-@media screen (min-width: 1024px) {
-    .main{
-      display: none;
-    }
+@media only screen and (min-width: 1024px) {
+  .main{
+    display:flex ;
+    flex-direction: column;
+    width: 100vh;
+  }
 }
 
 
@@ -39,24 +40,25 @@ img {
   height: 77px;
   display: block;
   max-width: 100%;
-  margin-top: 20;
+  margin-top: 20px;
 }
 
 .text2{
-    color: #737373;
-    font-size: 1rem;
-    line-height: 25px;
-    font-weight: 400;
-    overflow-wrap: break-word;
-    display: block;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-  }
+  color: #737373;
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  display: block;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
 
-@media only screen and (min-width: 1023.9px) {
-    .text2{
-        display: none;
-    }
+@media only screen and (min-width: 1022px) {
+  .text2{
+    display: none;
+    margin: 20px;
+  }
 }
 
 .text1{
@@ -70,21 +72,28 @@ img {
   margin-block-end: 1rem;
 }
 
-@media only screen and (max-width: 1024.5px) {
-    .text1{
-        display: none;
-    }
+@media only screen and (max-width: 1023.1px) {
+  .text1{
+    display: none;
+  }
 }
 
 .leftside {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   margin-inline: auto;
   width: min(50%, 500px);
 }
 
+@media only screen and (max-width: 1024.5px) {
+  .leftside{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .rightside {
-    margin: AUTO;
+  margin: 0;
   width: 50% 500px;
   display: block;
   color: black;
@@ -93,36 +102,56 @@ img {
   width: 576px;
   max-width: fit-content;
   height: 530px;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto auto auto auto auto;
+   
 }
 
 .form {
   background-color: hsl(0, 0%, 100%);
   border-radius: 2px;
-  display: grid;  
-  
-  grid-gap: 10px;
-  height: 530px;
-  width: 374.5px;
-  padding: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  padding: 25px;
 }
 
-.column{
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: rows;
+}
+
+@media only screen and (max-width: 1023px) {
+  .flex{
+    display:flex ;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: auto;
+  }
+}
+
+.flexitem{
+  width: auto;
+  box-sizing: border-box;
+  margin: 5px;
 }
 
 input,
-select {
-  height: 30px;
+select{
+  height: 40px;
   width: 90%;
+  justify-content: space-around;
 }
 
- 
-.label{
-    display: grid;
-    grid-template-rows: auto;
+button{
+  height: 40px;
+  width: 90%;
+  color: #f9f6f6;
+  background-color: rgb(46, 196, 182);
+  cursor: pointer;
+  grid-area: button;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+a{
+  color:rgb(46, 196, 182) ;
 }
